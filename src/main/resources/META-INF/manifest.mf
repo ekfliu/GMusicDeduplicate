@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: eclipse
+Build-Jdk: 1.6.0
+Class-Path: .
+Main-Class: com.simontuffs.onejar.Boot

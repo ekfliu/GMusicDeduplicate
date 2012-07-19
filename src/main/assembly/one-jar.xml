@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>one-jar</id>
+	<formats>
+		<format>jar</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<!-- fileSets>
+		<fileSet>
+		<directory>target</directory>
+		<outputDirectory>main</outputDirectory>
+		<outputFileNameMapping>main.jar</outputFileNameMapping>
+		<includes>
+		<include>${artifactId}-${version}.jar</include>
+		</includes>
+		</fileSet>
+		</fileSets-->
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory />
+			<outputFileNameMapping />
+			<scope>runtime</scope>
+			<unpack>true</unpack>
+			<includes>
+				<include>com.simontuffs:one-jar</include>
+			</includes>
+		</dependencySet>
+		<dependencySet>
+			<outputDirectory>main</outputDirectory>
+			<outputFileNameMapping>main.jar</outputFileNameMapping>
+			<useProjectAttachments>true</useProjectAttachments>
+			<scope>runtime</scope>
+			<includes>
+				<include>${groupId}:${artifactId}</include>
+			</includes>
+		</dependencySet>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<scope>runtime</scope>
+			<excludes>
+				<exclude>com.simontuffs:one-jar</exclude>
+				<exclude>${groupId}:${artifactId}</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+</assembly>
